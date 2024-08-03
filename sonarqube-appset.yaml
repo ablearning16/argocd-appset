@@ -5,7 +5,7 @@ metadata:
   namespace: argocd
 spec:
   generators:
-    - lists:
+    - list:
         elements:
           - cluster: dev
             namespace: dev-argocd
