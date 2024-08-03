@@ -1,0 +1,29 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: sonarqube-dev-appset
+  namespace: argocd
+spec:
+  generators:
+    - lists:
+        elements:
+          - cluster: dev
+            namespace: dev-namespace
+            repoURL: ''
+            targetRevision: main
+  template:
+    metadata:
+      name:'{{cluster}}-sonarqube'
+    spec:
+      project: default
+      source:
+        repoURL: '{{repoURL}}'
+        targetRevision: '{{targetRevision}}'
+        path: 'sonarqube-dev'
+      destination:
+        server: https://kubernetes.default.svc
+        namespace: '{{namespace}}'
+      syncPolicy:
+        automated:
+          prune: true
+          selHeal: true
