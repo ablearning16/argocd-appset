@@ -8,9 +8,9 @@ spec:
     - lists:
         elements:
           - cluster: dev
-            namespace: dev-namespace
-            repoURL: ''
-            targetRevision: main
+            namespace: dev-argocd
+            repoURL: 'https://github.com/ablearning16/argocd-appset.git'
+            targetRevision: master
   template:
     metadata:
       name:'{{cluster}}-sonarqube'
