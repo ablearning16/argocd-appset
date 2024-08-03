@@ -13,7 +13,7 @@ spec:
             targetRevision: master
   template:
     metadata:
-      name:'{{cluster}}-sonarqube'
+      name: '{{cluster}}-sonarqube'
     spec:
       project: default
       source:
