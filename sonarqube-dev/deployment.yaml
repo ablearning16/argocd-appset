@@ -21,7 +21,7 @@ spec:
         - containerPort: 9000
         env:
         - name: SONAR_JDBC_URL
-          value: jdbc:postgresql://sonarqube-postgresql:5432/sonarqube
+          value: jdbc:postgresql://sonarqube-postgresql-deployment:5432/sonarqube
         - name: SONAR_JDBC_PASSWORD
           value: sonarqube
 
