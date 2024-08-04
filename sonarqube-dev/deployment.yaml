@@ -4,7 +4,7 @@ metadata:
   name: sonarqube-deployment
   labels:
     app: sonarqube
-specs:
+spec:
   replicas: 1
   selector:
     matchLabels:
@@ -34,7 +34,7 @@ metadata:
   name: sonarqube-postgresql-deployment
   labels:
     app: sonarqube-postgresql
-specs:
+spec:
   replicas: 1
   selector:
     matchLabels:
