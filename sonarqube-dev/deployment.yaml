@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: sonarqube
+  name: sonarqube-deployment
   labels:
     app: sonarqube
 specs:
@@ -12,7 +12,7 @@ specs:
   template:
     metadata:
       labels:
-      app: sonarqube
+        app: sonarqube
     spec:
       containers:
       - name: sonarqube
@@ -31,7 +31,7 @@ specs:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: sonarqube-postgresql
+  name: sonarqube-postgresql-deployment
   labels:
     app: sonarqube-postgresql
 specs:
