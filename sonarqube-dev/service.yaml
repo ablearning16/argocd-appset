@@ -22,5 +22,5 @@ spec:
     app: sonarqube-postgresql
   ports:
   - protocol: TCP
-    port: 5432
-    targetPort: 5432
+    port: 5433
+    targetPort: 5433
