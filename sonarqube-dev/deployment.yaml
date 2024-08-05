@@ -19,6 +19,13 @@ spec:
         image: sonarqube:lts
         ports:
         - containerPort: 9000
+        resources:
+          requests:
+            memory: "1Gi"
+            cpu: "500m"
+          limits:
+            memory: "2Gi"
+            cpu: "1"
         env:
         - name: SONAR_JDBC_URL
           value: jdbc:postgresql://sonarqube-postgresql:5432/sonarqube
