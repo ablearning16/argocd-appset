@@ -29,10 +29,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: sonarqube-postgresql
+  name: postgresql
 spec:
   type: ClusterIP
   ports:
     - port: 5432 
   selector:
-    app: sonarqube-postgresql
+    app: postgresql
