@@ -54,7 +54,7 @@ spec:
         app: sonarqube-postgresql
     spec:
       containers:
-      - name: postgresql
+      - name: sonarque-postgresql
         image: bitnami/postgresql:14.12.0
         env:
         - name: POSTGRES_DB
