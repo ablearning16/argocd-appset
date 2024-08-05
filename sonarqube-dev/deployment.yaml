@@ -55,7 +55,7 @@ spec:
     spec:
       containers:
       - name: sonarque-postgresql
-        image: bitnami/postgresql:14.12.0
+        image: bitnami/postgresql:15.7.0
         env:
         - name: POSTGRES_DB
           value: sonarqube
