@@ -29,7 +29,7 @@ spec:
         env:
         - name: SONAR_JDBC_URL
           value: jdbc:postgresql://sonarqube-postgresql:5432/sonarqube
-        - name: SONAR_JDBC_PASSWORD
+        - name: SONARQUBE_DATABASE_PASSWORD
           value: sonarqube
       # nodeSelector:
       #           role: worker
@@ -61,7 +61,7 @@ spec:
           value: sonarqube
         - name: POSTGRES_USER
           value: sonarqube
-        - name: POSTGRES_PASSWORD
+        - name: SONARQUBE_DATABASE_PASSWORD
           value: sonarqube
         ports:
         - containerPort: 5432
