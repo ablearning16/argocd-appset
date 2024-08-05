@@ -60,7 +60,7 @@ spec:
         - name: POSTGRES_DB
           value: sonarqube
         - name: POSTGRES_USER
-          value: sonarqube
+          value: bn_sonarqube
         - name: POSTGRESQL_PASSWORD
           value: sonarqube
         ports:
