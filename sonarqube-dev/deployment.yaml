@@ -28,7 +28,7 @@ spec:
             cpu: "1"
         env:
         - name: SONAR_JDBC_URL
-          value: jdbc:postgresql://sonarqube-postgresql-6c9cf7dbfd-7snw4:5432/sonarqube
+          value: jdbc:postgresql://10.244.1.11:5432/sonarqube
         - name: SONARQUBE_DATABASE_PASSWORD
           value: sonarqube
       # nodeSelector:
