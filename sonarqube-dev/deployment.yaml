@@ -24,6 +24,8 @@ spec:
           value: jdbc:postgresql://sonarqube-postgresql:5432/sonarqube
         - name: SONAR_JDBC_PASSWORD
           value: sonarqube
+      # nodeSelector:
+      #           role: worker
 
 
 ---
@@ -56,3 +58,5 @@ spec:
           value: sonarqube
         ports:
         - containerPort: 5432
+      # nodeSelector:
+      #           role: worker
