@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: sonarqube
-        image: bitnami/sonarqube:9.9.6-debian-12-r4
+        image: sonarqube:lts-developer
         ports:
         - containerPort: 9000
         resources:
