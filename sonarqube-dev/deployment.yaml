@@ -29,11 +29,11 @@ spec:
         env:
         - name: SONAR_JDBC_URL
           valueFrom:
-            configMapKeyRef:
+            secretKeyRef:
               name: sonarqube-config
               key: SONAR_JDBC_URL
         - name: SONARQUBE_DATABASE_PASSWORD
-          value:
+          valueFrom:
             secretKeyRef:
               name: sonarqube-db-creds
               key: SONARQUBE_DATABASE_PASSWORD
@@ -68,8 +68,8 @@ spec:
         # - name: POSTGRES_USER
         #   value: bn_sonarqube
         - name: POSTGRESQL_PASSWORD
-          value:
-            secretKeyRef:
+          valueFrom:
+           secretKeyRef:
               name: sonarqube-db-creds
               key: POSTGRESQL_PASSWORD
         ports:
