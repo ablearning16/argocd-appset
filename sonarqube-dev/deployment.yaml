@@ -29,7 +29,7 @@ spec:
         env:
         - name: SONAR_JDBC_URL
           valueFrom:
-            secretKeyRef:
+            configMapKeyRef:
               name: sonarqube-config
               key: SONAR_JDBC_URL
         - name: SONARQUBE_DATABASE_PASSWORD
