@@ -62,13 +62,16 @@ spec:
       containers:
       - name: postgresql
         image: bitnami/postgresql:15.7.0
-        # env:
+        env:
         # - name: POSTGRES_DB
         #   value: bitnami_sonarqube
         # - name: POSTGRES_USER
         #   value: bn_sonarqube
-        # - name: POSTGRESQL_PASSWORD
-        #   value: sonarqube
+        - name: POSTGRESQL_PASSWORD
+          valueFrom:
+            secretKeyRef:
+            name: sonarqube-db-creds
+            key: POSTGRESQL_PASSWORD
         ports:
         - containerPort: 5432
       # nodeSelector:
