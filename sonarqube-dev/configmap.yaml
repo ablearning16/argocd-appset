@@ -1,6 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
+  namespace: dev-argocd
   name: sonarqube-config
 data:
   SONAR_JDBC_URL: jdbc:postgresql://postgresql:5432/sonarqube

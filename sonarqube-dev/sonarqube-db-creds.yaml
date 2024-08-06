@@ -1,6 +1,7 @@
 apiVersion: v1
 kind: Secret
 metadata:
+  namespace: dev-argocd
   name: sonarqube-db-creds
 type: Opaque
 data:
