@@ -33,10 +33,10 @@ spec:
               name: sonarqube-config
               key: SONAR_JDBC_URL
         - name: SONARQUBE_DATABASE_PASSWORD
-          valueFrom:
+          value:
             secretKeyRef:
-            name: sonarqube-db-creds
-            key: SONARQUBE_DATABASE_PASSWORD
+              name: sonarqube-db-creds
+              key: SONARQUBE_DATABASE_PASSWORD
       # nodeSelector:
       #           role: worker
 
@@ -68,10 +68,10 @@ spec:
         # - name: POSTGRES_USER
         #   value: bn_sonarqube
         - name: POSTGRESQL_PASSWORD
-          valueFrom:
+          value:
             secretKeyRef:
-            name: sonarqube-db-creds
-            key: POSTGRESQL_PASSWORD
+              name: sonarqube-db-creds
+              key: POSTGRESQL_PASSWORD
         ports:
         - containerPort: 5432
       # nodeSelector:
