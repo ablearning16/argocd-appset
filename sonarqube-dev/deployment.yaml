@@ -67,6 +67,12 @@ spec:
         #   value: bitnami_sonarqube
         # - name: POSTGRES_USER
         #   value: bn_sonarqube
+        - name: POSTGRES_USER
+          valueFrom:
+           secretKeyRef:
+              name: sonarqube-db-creds
+              key: POSTGRES_USER
+
         - name: POSTGRESQL_PASSWORD
           valueFrom:
            secretKeyRef:
