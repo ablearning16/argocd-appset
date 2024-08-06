@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: sonarqube-db-creds
+type: Opaque
+data:
+  SONARQUBE_DATABASE_PASSWORD: c29uYXJxdWJlCg==
+  POSTGRES_USER: c29uYXJxdWJlcG9zdGdyZXNxbAo=
+  POSTGRESQL_PASSWORD: c29uYXJxdWJlcG9zdGdyZXNxbDEK
+  
