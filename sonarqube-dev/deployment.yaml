@@ -28,9 +28,15 @@ spec:
             cpu: "1"
         env:
         - name: SONAR_JDBC_URL
-          value: jdbc:postgresql://postgresql:5432/bitnami_sonarqube
+          valueFrom:
+            configMapKeyRef:
+              name: sonarqube-config
+              key: SONAR_JDBC_URL
         - name: SONARQUBE_DATABASE_PASSWORD
-          value: sonarqube
+          valueFrom:
+            secretKeyRef:
+            name: sonarqube-db-creds
+            key: SONARQUBE_DATABASE_PASSWORD
       # nodeSelector:
       #           role: worker
 
@@ -56,13 +62,13 @@ spec:
       containers:
       - name: postgresql
         image: bitnami/postgresql:15.7.0
-        env:
-        - name: POSTGRES_DB
-          value: bitnami_sonarqube
-        - name: POSTGRES_USER
-          value: bn_sonarqube
-        - name: POSTGRESQL_PASSWORD
-          value: sonarqube
+        # env:
+        # - name: POSTGRES_DB
+        #   value: bitnami_sonarqube
+        # - name: POSTGRES_USER
+        #   value: bn_sonarqube
+        # - name: POSTGRESQL_PASSWORD
+        #   value: sonarqube
         ports:
         - containerPort: 5432
       # nodeSelector:
