@@ -6,3 +6,4 @@ metadata:
 data:
   SONAR_JDBC_URL: jdbc:postgresql://postgresql:5432/sonarqube
   POSTGRES_DB: sonarqube
+  POSTGRES_USER: sonarqube
