@@ -67,6 +67,8 @@ spec:
           value: sonarqube
         - name: POSTGRES_USER
           value: sonarqube
+        - name: POSTGRESQL_PASSWORD
+          value: sonarqube
         # - name: POSTGRES_USER
         #   valueFrom:
         #    secretKeyRef:
