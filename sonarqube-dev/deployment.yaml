@@ -65,7 +65,7 @@ spec:
         env:
         - name: POSTGRES_DB
           value: sonarqube
-        - name: PostgreSQL
+        - name: POSTGRESQL_USER
           value: sonarqube
         - name: POSTGRESQL_PASSWORD
           value: sonarqube
