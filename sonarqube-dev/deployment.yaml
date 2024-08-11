@@ -33,13 +33,13 @@ spec:
           value: sonarqube
         - name: SONAR_JDBC_PASSWORD
           value: sonarqube
-        volumeMounts:
-        - name: sonarqube-storage
-          mountPath: /opt/sonarqube/data
-        volumes:
-        - name: sonarqube-storage
-          persistentVolumeClaim:
-            claimName: sonarqube-pvc
+        # volumeMounts:
+        # - name: sonarqube-storage
+        #   mountPath: /opt/sonarqube/data
+        # volumes:
+        # - name: sonarqube-storage
+        #   persistentVolumeClaim:
+        #     claimName: sonarqube-pvc
         #   valueFrom:
         #     configMapKeyRef:
         #       name: sonarqube-config
@@ -83,13 +83,13 @@ spec:
           value: sonarqube
         - name: POSTGRES_PASSWORD
           value: sonarqube
-        volumeMounts:
-        - name: postgresql-storage
-          mountPath: /var/lib/postgresql/data
-      volumes:
-      - name: postgresql-storage
-        persistentVolumeClaim:
-          claimName: posgresql-pvc
+      #   volumeMounts:
+      #   - name: postgresql-storage
+      #     mountPath: /var/lib/postgresql/data
+      # volumes:
+      # - name: postgresql-storage
+      #   persistentVolumeClaim:
+      #     claimName: posgresql-pvc
         # - name: POSTGRES_USER
         #   valueFrom:
         #    secretKeyRef:
@@ -101,30 +101,30 @@ spec:
         #    secretKeyRef:
         #       name: sonarqube-db-creds
         #       key: POSTGRESQL_PASSWORD
-        ports:
-        - containerPort: 5432
+        # ports:
+        # - containerPort: 5432
       # nodeSelector:
       #           role: worker
 ---
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: sonarqube-pvc
-spec:
-  accessModes:
-  - ReadWriteOnce
-  resources:
-    requests:
-      storage: 5Gi
+# apiVersion: v1
+# kind: PersistentVolumeClaim
+# metadata:
+#   name: sonarqube-pvc
+# spec:
+#   accessModes:
+#   - ReadWriteOnce
+#   resources:
+#     requests:
+#       storage: 5Gi
 
----
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: postgresql-pvc
-spec:
-  accessModes:
-  - ReadWriteOnce
-  resources:
-    requests:
-      storage: 5Gi
+# ---
+# apiVersion: v1
+# kind: PersistentVolumeClaim
+# metadata:
+#   name: postgresql-pvc
+# spec:
+#   accessModes:
+#   - ReadWriteOnce
+#   resources:
+#     requests:
+#       storage: 5Gi
