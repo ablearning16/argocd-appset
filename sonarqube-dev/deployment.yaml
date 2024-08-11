@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: sonarqube
-        image: bitnami/sonarqube:9.9.6
+        image: sonarqube:lts
         ports:
         - containerPort: 9000
         resources:
