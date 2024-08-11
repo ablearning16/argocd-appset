@@ -31,7 +31,7 @@ spec:
           valueFrom:
             configMapKeyRef:
               name: sonarqube-config
-              key: SONAR_JDBC_URL
+              key: SONARQUBE_JDBC_URL
         - name: SONARQUBE_DATABASE_PASSWORD
           valueFrom:
             secretKeyRef:
